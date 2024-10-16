@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaPrint", "VistaPrint\VistaPrint\VistaPrint.csproj", "{9B5A7A74-1920-45AE-AAAA-9C9AB900EA45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VistaPrint", "VistaPrint\VistaPrint\VistaPrint.csproj", "{9B5A7A74-1920-45AE-AAAA-9C9AB900EA45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaPrint.Client", "VistaPrint\VistaPrint.Client\VistaPrint.Client.csproj", "{58FB8FB7-D168-450A-B354-5813D0426D6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VistaPrint.Client", "VistaPrint\VistaPrint.Client\VistaPrint.Client.csproj", "{58FB8FB7-D168-450A-B354-5813D0426D6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
