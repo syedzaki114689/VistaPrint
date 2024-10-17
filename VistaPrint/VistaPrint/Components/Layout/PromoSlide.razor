@@ -1,40 +1,96 @@
-﻿<div class="main-content container-fluid p-4">
-    <div class="row">
-        <div class="col-md-7 d-flex justify-content-center flex-column p-5">
-            <h1>
-                Everything you need for the busy season? We print that.
-            </h1>
-            <p>
-                Get $30 off orders $200+ to make the holidays a breeze.
-            </p>
-            <p>
-                <strong>
-                    Code: PROMO
-                </strong>
-                | Ends Oct. 20
-            </p>
-            <div class="d-inline-flex">
-                <button class="btn btn-dark">
-                    Shop holiday prep
-                </button>
-                <button class="btn btn-outline-dark">
-                    Business Cards
-                </button>
-                <button class="btn btn-outline-dark">
-                    Marketing Materials
-                </button>
-                
+﻿@attribute [StreamRendering]
+
+
+@if (_promoModel == null)
+{
+    <div class="main-content container-fluid p-4">
+
+        <p><em>Loading...</em><span class="fas fa-loader"></span></p>
+    </div>
+}
+else
+{
+    <div class="main-content container-fluid p-4">
+        <div class="row">
+            <div class="col-md-7 d-flex justify-content-center flex-column p-5">
+                <h1>
+                    @_promoModel.Title
+                </h1>
+                <p>
+                    @_promoModel.Description
+                </p>
+                <p>
+                   @_promoModel.AdditionalData
+                </p>
+
+                <div class="d-inline-flex">
+                    @{bool first = false;}
+                    @foreach (var item in _promoModel.Links ?? new())
+                    {
+                        if (first)
+                        {
+                            <a class="btn btn-dark" href="@item.Item2">
+                                @item.Item1
+                            </a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-dark" href="@item.Item2">
+                                @item.Item1
+                            </a>
+                            first = false;
+                        }
+                       
+                    }
+                </div>
+
+                <p class="note">
+                    @_promoModel.Note
+                </p>
             </div>
-            <p class="note">
-                Not combinable with other offers.
-            </p>
-        </div>
-        <div class="col-md-5 d-flex justify-content-center flex-row">
-            <img alt="Promotional materials including business cards and holiday sale items" class="img-fluid" height="100" src="https://storage.googleapis.com/a1aa/image/0Bxb7mlh4fUUA66fyGjvSeCZFNewqGN7RxGCGvdaOC7XQf3cC.jpg" width="300" />
+            <div class="col-md-5 d-flex justify-content-center flex-row">
+                @foreach (var item in _promoModel.ImagePaths?? new())
+                {
+                    <img alt="Promotional materials" class="img-fluid m-1" height="100" src="@item" width="300" />
+
+                }
+            </div>
         </div>
     </div>
-</div>
+}
 
 @code {
 
+    private PromoModel? _promoModel;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(500);
+
+        _promoModel = new PromoModel().GetMockData();
+    }
+
+
+    class PromoModel
+    {
+        public string? Title { get; set; }
+        public string? Description { get; set; }
+        public string? AdditionalData { get; set; }
+        public List<(string, string)>? Links { get; set; }
+        public string? Note { get; set; }
+        public List<string>? ImagePaths { get; set; }
+
+        public PromoModel GetMockData()
+        {
+            return new()
+                {
+                    Title = "Everything you need for the busy season? We print that.",
+                    Description = "Get $30 off orders $200+ to make the holidays a breeze.",
+                    AdditionalData = "<strong> Code: PROMO</strong>| Ends Oct. 20",
+                    Links = new List<(string, string)>() { ("Shop holiday prep", ""), ("Business Cards", ""), ("Marketing Materials", ""), ("Marketing Materials", "") },
+                    Note = "Not combinable with other offers.",
+                    ImagePaths = new() { "https://storage.googleapis.com/a1aa/image/0Bxb7mlh4fUUA66fyGjvSeCZFNewqGN7RxGCGvdaOC7XQf3cC.jpg", "https://storage.googleapis.com/a1aa/image/0Bxb7mlh4fUUA66fyGjvSeCZFNewqGN7RxGCGvdaOC7XQf3cC.jpg" }
+                };
+        }
+    }
 }
