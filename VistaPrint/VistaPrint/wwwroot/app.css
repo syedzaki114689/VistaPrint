@@ -1,11 +1,10 @@
-
-
-
-/*custom*/
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size:smaller;
+    padding: 0.2rem;
 }
+
+
 
 .navbar {
     border-bottom: 1px solid #e0e0e0;
@@ -24,7 +23,6 @@ body {
 
 .main-content {
     background-color: #f5f0e6;
-    padding: 20px;
 }
 
     .main-content h1 {
@@ -36,18 +34,12 @@ body {
         font-size: 16px;
     }
 
-    .main-content .btn {
-        margin-right: 10px;
-    }
-
     .main-content .note {
         font-size: 12px;
         color: #666;
     }
 
-    .main-content img {
-        border-radius: 8px;
-    }
+
 
 .category-circle {
     width: 100px;
@@ -134,6 +126,44 @@ body {
 }
 
 .text-center {
-    width: 120px; /* Fixed width for each item */
+   
 }
 
+
+.btn-nav {
+    /* Default button styles */
+    padding: 0.525rem 0.525rem; /* Larger padding for xl screens */
+    font-size: 20px; /* Larger font size */
+    transition: transform 0.3s ease !important;
+    color: #525252 !important;
+    border:none !important;
+    outline:none !important;
+    box-shadow:none !important;
+}
+    .btn-nav:hover {
+        background-color: transparent !important;
+        color: black !important;
+        transform: scale(1.1) !important;
+    }
+@media (min-width: 1200px) {
+    .btn-nav {
+        padding: 0.3125rem 0.3125rem; /* Smaller screens */
+        font-size: 16px; /* Base font size */
+    }
+}
+
+
+.btn-cat-nav {
+    /* Default button styles */
+    font-size: 14px; /* Larger font size */
+    transition: transform 0.3s ease !important;
+    color: #525252 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+    .btn-cat-nav:hover {
+        background-color: transparent !important;
+        color: black !important;
+        transform: scale(1.1) !important;
+    }

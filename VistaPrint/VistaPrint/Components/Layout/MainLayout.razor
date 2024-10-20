@@ -2,54 +2,57 @@
 
 
 <div class="page">
-   
+
     <main>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid p-2">
-                <a class="navbar-brand" href="#">
-                    <img alt="Vistaprint Logo" height="30" src="https://storage.googleapis.com/a1aa/image/7mQefmPfixJb1JRSTzgOxbP9aSuJqbBS5xsidYd7cgYPofbOB.jpg" width="100" />
-                </a>
-                <form class="d-flex ms-auto col-md-6">
-                    <input aria-label="Search" class="form-control form-control-md me-2" placeholder="Search" type="search" />
-                    <button class="btn btn-outline-success" type="submit">
-                        <i class="fas fa-search">
-                        </i>
-                    </button>
-                </form>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row justify-content-around">
-                    <li class="nav-item me-2">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-question-circle">
+        <div class="d-none d-lg-block">
+            <nav class=" navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid p-0 ps-2">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Vistaprint Logo" height="30" src="https://storage.googleapis.com/a1aa/image/7mQefmPfixJb1JRSTzgOxbP9aSuJqbBS5xsidYd7cgYPofbOB.jpg" width="100" />
+                    </a>
+                    <form class="d-flex ms-auto col-md-6">
+                        <input aria-label="Search" class="form-control form-control-md me-2" placeholder="Search" type="search" />
+                        <button class="btn btn-outline-success" type="submit">
+                            <i class="fas fa-search">
                             </i>
-                            Help is here
-                        </a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-folder-open">
-                            </i>
-                            My Projects
-                        </a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-sign-in-alt">
-                            </i>
-                            Sign in
-                        </a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-shopping-cart">
-                            </i>
-                            Cart
-                        </a>
-                    </li>
-                </ul>
+                        </button>
+                    </form>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row justify-content-around">
+                        <li class="nav-item me-2">
+                            <a class="btn-nav nav-link btn-md" href="#">
+                                <i class="fas fa-question-circle m-1">
+                                </i>
+                                <span class="d-none d-xl-inline-flex">Help is here</span>
+                                
+                            </a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="btn-md nav-link btn-nav" href="#">
+                                <i class="fas fa-folder-open  m-1">
+                                </i>
+                                <span class="d-none d-xl-inline-flex">My Projects</span>
+                            </a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link btn-nav btn-md" href="#">
+                                <i class="fas fa-sign-in-alt  m-1">
+                                </i>
+                                <span class="d-none d-xl-inline-flex">Sign in</span>
+                            </a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link btn-nav btn-md" href="#">
+                                <i class="fas fa-shopping-cart  m-1">
+                                </i>
+                                <span class="d-none d-xl-inline-flex"> Cart</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-        </nav>
+            </nav>
+        </div>
         <Catagories />
-       @Body
+        @Body
     </main>
 </div>
 
