@@ -1,6 +1,6 @@
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    font-size:smaller;
+    font-size: smaller;
     padding: 0.2rem;
 }
 
@@ -91,8 +91,7 @@ body {
 /* width */
 ::-webkit-scrollbar {
     width: 4px;
-    height:4px;
-   
+    height: 4px;
 }
 
 /* Track */
@@ -116,8 +115,7 @@ body {
 .scroll-container {
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
-    padding:20px;
-    
+    padding: 20px;
 }
 
 .category-icon {
@@ -126,7 +124,6 @@ body {
 }
 
 .text-center {
-   
 }
 
 
@@ -136,15 +133,17 @@ body {
     font-size: 20px; /* Larger font size */
     transition: transform 0.3s ease !important;
     color: #525252 !important;
-    border:none !important;
-    outline:none !important;
-    box-shadow:none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
+
     .btn-nav:hover {
         background-color: transparent !important;
         color: black !important;
         transform: scale(1.1) !important;
     }
+
 @media (min-width: 1200px) {
     .btn-nav {
         padding: 0.3125rem 0.3125rem; /* Smaller screens */
@@ -161,9 +160,53 @@ body {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+    cursor:default;
 }
+
     .btn-cat-nav:hover {
         background-color: transparent !important;
         color: black !important;
         transform: scale(1.1) !important;
     }
+
+
+.droplist {
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Invisible initially */
+    margin: 0 auto;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: 100%; /* Position right below the nav item */
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    transform: translateX(-100%) scale(0.95); /* Start off-screen to the left */
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+@media (min-width: 992px) {
+
+    .droplist {
+        transform: scale(0.95); /* Slightly shrink the dropdown */
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    }
+        .nav-item:hover .droplist {
+        visibility: visible;
+        opacity: 1; /* Make it visible */
+        transform: scale(1); /* Reset scale to normal size */
+    }
+}
+@media (min-width: 0px) {
+    .nav-item:focus-within .droplist {
+        visibility: visible;
+        opacity: 1; /* Make it visible */
+        transform: translateX(0) scale(1);
+        left: 50%;
+        width: 50vw;
+        top: 10%;
+        border-radius: 0px !important;
+        }
+}
+

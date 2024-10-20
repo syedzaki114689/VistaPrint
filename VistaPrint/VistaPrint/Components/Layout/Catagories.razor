@@ -41,8 +41,8 @@
 
 
         <div class="collapse navbar-collapse justify-content-lg-center justify-content-start" id="navbarTogglerDemo01">
-            <div class="d-flex d-xl-block">
-                <ul class="navbar-nav d-flex justify-content-between text-xl-center align-items-center">
+            <div class="d-flex d-xl-block ms-5 ms-lg-1">
+                <ul class="navbar-nav d-flex justify-content-between text-lg-center align-items-lg-center">
                    
                     @if (CatagoriesList is null)
                     {
@@ -53,19 +53,26 @@
                         @foreach (var item in CatagoriesList)
                         {
                             <li class="nav-item">
-                                <a class="nav-link btn-cat-nav href="#">
-
+                                <button class="nav-link btn-cat-nav" href="">
                                     @((MarkupString)item)
-                                </a>
+                                </button>
+                                <div class="droplist p-3 rounded-bottom-5">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><a class="btn btn-md">@((MarkupString)item)</a></li>
+                                        <li class="list-group-item"><a class="btn btn-md">A second item</a></li>
+                                        <li class="list-group-item"><a class="btn btn-md">A third item</a></li>
+                                        <li class="list-group-item"><a class="btn btn-md">A fourth item</a></li>
+                                        <li class="list-group-item"><a class="btn btn-md">And a fifth one</a></li>
+                                    </ul>
+                                </div>
                             </li>
+                           
                         }
-
                     }
-
-                    
                 </ul>
 
             </div>
+           
 
         </div>
     </div>
