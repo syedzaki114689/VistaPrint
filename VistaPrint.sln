@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VistaPrint", "VistaPrint\VistaPrint\VistaPrint.csproj", "{9B5A7A74-1920-45AE-AAAA-9C9AB900EA45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VistaPrint", "E:\projects\VistaPrint\WebClient\VistaPrint\VistaPrint.csproj", "{9B5A7A74-1920-45AE-AAAA-9C9AB900EA45}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VistaPrint.Client", "VistaPrint\VistaPrint.Client\VistaPrint.Client.csproj", "{58FB8FB7-D168-450A-B354-5813D0426D6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VistaPrint.Client", "E:\projects\VistaPrint\WebClient\VistaPrint.Client\VistaPrint.Client.csproj", "{58FB8FB7-D168-450A-B354-5813D0426D6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebClient", "WebClient", "{AE8B1ED5-55C4-4A2C-89AF-2CF36E3E6169}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiServer", "ApiServer", "{3B53ED6D-88CD-4A68-921A-519708AE2EB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B5A7A74-1920-45AE-AAAA-9C9AB900EA45} = {AE8B1ED5-55C4-4A2C-89AF-2CF36E3E6169}
+		{58FB8FB7-D168-450A-B354-5813D0426D6F} = {AE8B1ED5-55C4-4A2C-89AF-2CF36E3E6169}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {260B72F8-88AE-4DD9-9FD4-B2640A9FFD4A}

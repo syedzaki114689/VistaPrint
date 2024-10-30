@@ -183,14 +183,14 @@ body {
     left: 0;
     width: 100vw; /* Full viewport width */
     transform: translateX(-100%) scale(0.95); /* Start off-screen to the left */
-    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    transition: transform 0.6s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
 
 @media (min-width: 992px) {
 
     .droplist {
         transform: scale(0.95); /* Slightly shrink the dropdown */
-        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        transition: transform 0.6s ease, opacity 0.3s ease, visibility 0.3s ease;
     }
         .nav-item:hover .droplist {
         visibility: visible;
@@ -198,15 +198,58 @@ body {
         transform: scale(1); /* Reset scale to normal size */
     }
 }
-@media (min-width: 0px) {
+@media (max-width: 992px) {
     .nav-item:focus-within .droplist {
         visibility: visible;
         opacity: 1; /* Make it visible */
         transform: translateX(0) scale(1);
         left: 50%;
         width: 50vw;
-        top: 10%;
+        top: 11%;
         border-radius: 0px !important;
-        }
+        height: 89%;
+    }
+    .droplist {
+        top: 12%; /* Position right below the nav item */
+        left: -30%;
+    }
+    .droplist {
+        visibility: visible;
+        opacity: 1; /* Make it visible */
+        transform: translateX(0) scale(1);
+        left: 50%;
+        width: 50vw;
+        top: 11%;
+        border-radius: 0px !important;
+        height: 89%;
+    }
 }
+
+@media (max-width: 850px) {
+    .nav-item:focus-within
+    .droplist {
+        visibility: visible;
+        opacity: 1; /* Make it visible */
+        transform: translateX(0) scale(1);
+        left: -1%;
+        width: 100vw;
+        top: 12%;
+        border-radius: 0px !important;
+        height: 100%;
+    }
+    .droplist {
+        top: 12%; /* Position right below the nav item */
+        left: -30%;
+    }
+        /*.droplist {
+        visibility: visible;
+        opacity: 1;*/ /* Make it visible */
+        /*transform: translateX(0) scale(1);
+        left: -1%;
+        width: 100vw;
+        top: 12%;
+        border-radius: 0px !important;
+        height: 100%;
+    }*/
+    }
 
